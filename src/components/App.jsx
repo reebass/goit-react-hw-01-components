@@ -1,7 +1,10 @@
 import { Profile } from "./Profile/Profile";
 import user from "data/user"
-import { Statistics } from "./Statistics/Statistics";
-import data from "data/data"
+import { FriendList } from "./FriendList/FriendList";
+import friends from "data/friends"
+// import { Statistics } from "./Statistics/Statistics";
+// import data from "../data/data"
+
 
 export const App = () => {
   return (
@@ -16,7 +19,7 @@ export const App = () => {
       }}
     >
       <Profile user={user}/>
-      <Statistics data={data} />     
+      <FriendList friends={friends}/>
 
     </div>
   );

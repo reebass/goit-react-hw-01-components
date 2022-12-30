@@ -19,7 +19,7 @@ export const Profile = ({user: { username, tag, location, avatar, stats: {follow
       <div className="description">
         <img
           src={avatar}
-          alt="User avatar"
+          alt={username}
           className="avatar"
         />
         <p className="name">{username}</p>
