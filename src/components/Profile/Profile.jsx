@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Avatar, Card, Description, Tag, UserName, Location, Stats, StatsItem, StatsItemLabel, StatsItemQuantity } from './Profile.styled'
 
 Event.PropTypes = {
   username: PropTypes.string.isRequired,
@@ -15,32 +16,32 @@ Event.PropTypes = {
 
 export const Profile = ({user: { username, tag, location, avatar, stats: {followers, views, likes}}}) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img
+    <Card className="profile">
+      <Description className="description">
+        <Avatar
           src={avatar}
           alt={username}
           className="avatar"
         />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+        <UserName className="name">{username}</UserName>
+        <Tag className="tag">@{tag}</Tag>
+        <Location className="location">{location}</Location>
+      </Description>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats className="stats">
+        <StatsItem>
+          <StatsItemLabel className="label">Followers</StatsItemLabel>
+          <StatsItemQuantity className="quantity">{followers}</StatsItemQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsItemLabel className="label">Views</StatsItemLabel>
+          <StatsItemQuantity className="quantity">{views}</StatsItemQuantity>
+        </StatsItem>
+        <StatsItem>
+          <StatsItemLabel className="label">Likes</StatsItemLabel>
+          <StatsItemQuantity className="quantity">{likes}</StatsItemQuantity>
+        </StatsItem>
+      </Stats>
+    </Card>
   );
 };
