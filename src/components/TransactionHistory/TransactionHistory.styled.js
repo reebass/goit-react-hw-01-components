@@ -6,6 +6,7 @@ export const Table = styled.table`
     border-radius: 10px;
 
     overflow: hidden;
+    width: 1000px;
 
     
 `
@@ -40,6 +41,7 @@ export const RowTable = styled.tr`
 export const ColumnTable = styled.td`
     padding: 10px 50px;
     text-align: center;
+    font-size: 24px;
 `
 
 
